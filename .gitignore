@@ -7,3 +7,17 @@ typechain
 #Hardhat files
 cache
 artifacts
+
+
+#prettier
+node_modules
+artifacts
+cache
+coverage*
+gasReporterOutput.json
+
+#eslint
+node_modules
+artifacts
+cache
+coverage
