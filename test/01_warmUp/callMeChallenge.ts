@@ -6,7 +6,7 @@ let accounts: Signer[];
 let contract: Contract;
 const contractAddr : string = `0x71b9627C2DB7A51851b337e6542A77B85D3Df91a`;
 
-describe("Call Me Challenge", function () {
+describe.skip("Call Me Challenge", function () {
     
     before(async () => {
       accounts = await ethers.getSigners();
