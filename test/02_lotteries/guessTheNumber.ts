@@ -7,7 +7,7 @@ let eoa: Signer;
 let contract: Contract; // challenge contract
 const contractAddr: string = `0x2d64f151Dd7F88A1e1EA20d2Af645CDeecd7fa8B`;
 
-describe("Lottery - guess the number", function () {
+describe.skip("Lottery - guess the number", function () {
   before(async () => {
     accounts = await ethers.getSigners();
     eoa = accounts[0];
