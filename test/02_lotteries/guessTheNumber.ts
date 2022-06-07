@@ -26,20 +26,3 @@ describe.skip("Lottery - guess the number", function () {
     console.log(`https://ropsten.etherscan.io/tx/${txHash}`);
   });
 });
-before(async () => {
-  accounts = await ethers.getSigners();
-  eoa = accounts[0];
-  const factory = await ethers.getContractFactory("GuessTheNumberChallenge");
-  contract = factory.attach(contractAddr);
-});
-
-it("solves the challenge", async function () {
-  let gasPrice = await ethers.provider.getGasPrice();
-  const tx = await contract.guess(42, {
-    value: ethers.utils.parseEther(`1`),
-    gasPrice: BigNumber.from(gasPrice)
-  });
-  const txHash = tx && tx.hash;
-  expect(txHash).to.not.be.undefined;
-  console.log(`https://ropsten.etherscan.io/tx/${txHash}`);
-});
